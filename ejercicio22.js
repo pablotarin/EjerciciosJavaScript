@@ -8,11 +8,11 @@ const foodSchedule = [
   { name: "Pasta", isVegan: true },
 ];
 
-for (let i = foodSchedule.length - 1; i >= 0; i--) {
+let fruitIndex = 0;
+for (let i = 0; i < foodSchedule.length; i++) {
   const f = foodSchedule[i];
-  let fruitIndex = 0;
   if (!f.isVegan && fruitIndex < fruits.length) {
-      f.name = fruits[i];
+      f.name = fruits[fruitIndex];
       f.isVegan = true;
       fruitIndex++;
   }
